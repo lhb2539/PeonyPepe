@@ -1,47 +1,54 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Config and Htaccess Files
+/upload/.htaccess
+/upload/config.php
+/upload/admin/config.php
 
-# Folder config file
-Desktop.ini
+# Image File
+!/upload/image/no_image.jpg
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Image Cache Files
+/upload/image/cache/*
+!/upload/image/cache/index.html
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# System Cache Files
+/upload/system/storage/cache/*
+!/upload/system/storage/cache/index.html
 
-# Windows shortcuts
-*.lnk
+# Modification Files
+/upload/system/storage/modification/*
+!/upload/system/storage/modification/index.html
 
-# =========================
-# Operating System Files
-# =========================
+# Templates Files
+/upload/image/templates/*
+/upload/image/templates/default.jpg
 
-# OSX
-# =========================
+# Download Files
+/upload/system/storage/download/*
+!/upload/system/storage/download/index.html
 
-.DS_Store
-.AppleDouble
-.LSOverride
+# Upload Files
+/upload/system/storage/upload/*
+!/upload/system/storage/upload/index.html
 
-# Thumbnails
-._*
+# Flags 
+# remove sharp char if you want to add flags to gitignore
+# /upload/flags/*
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+# Log Files
+/upload/system/storage/logs/*
+!/upload/system/storage/logs/index.html
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# If you want to ignore install file use following lines [on development mode]
+# /upload/backup.install/*
+# /upload/install/*
+
+# Ignore all vendor files included by composer and the lock file
+/tests/phpunit/vendor/*
+/tests/phpunit/composer.lock
+/vendor/*
+
+# Test Config File
+/tests/phpunit/bootstrap.php
+
+# IDE Project files
+/.idea
